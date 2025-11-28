@@ -6,7 +6,7 @@ let client;
 let clientPromise;
 
 if (!uri) {
-  throw new Error("Por favor define MONGO_URI en las variables de entorno");
+  throw new Error("no existe MONGO_URI");
 }
 
 if (!client) {
