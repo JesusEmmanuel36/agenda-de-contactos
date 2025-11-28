@@ -1,0 +1,365 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Botón Agregar Contacto - MODIFICADO */
+.boton-agregar-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.boton-agregar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.boton-agregar:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.boton-agregar:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+thead {
+  background-color: #f8f9fa;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+th {
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  color: #6c757d;
+  font-size: 15px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Botones en la tabla */
+td button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 8px;
+  height: auto;
+  min-height: 36px;
+}
+
+td button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+td button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+td button:first-child {
+  background-color: #27ae60;
+}
+
+td button:first-child:hover {
+  background-color: #219a52;
+}
+
+td button:last-child {
+  background-color: #e74c3c;
+}
+
+td button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Formulario - MODIFICADO */
+.formulario-contacto {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #f0f0f0;
+}
+
+.formulario-contacto h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 400;
+  text-align: center;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-contacto input,
+.formulario-contacto select {
+  padding: 12px 16px;
+  border: 2.2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #333;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.formulario-contacto input::placeholder {
+  color: #999;
+}
+
+/* BOTONES DEL FORMULARIO ARREGLADOS */
+.formulario-contacto button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  height: auto;
+  min-height: 44px;
+  width: 100%;
+}
+
+.formulario-contacto button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.formulario-contacto button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto button[type="button"] {
+  background-color: #ff0000;
+}
+
+.formulario-contacto button[type="button"]:hover {
+  background-color: #cc1010;
+}
+
+/* Overlay para el formulario */
+.formulario-contacto::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 12px 8px;
+  }
+
+  .formulario-contacto {
+    padding: 25px;
+    width: 95%;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto select {
+    font-size: 14px;
+  }
+
+  /* Hacer la tabla responsive en móviles */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .boton-agregar {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  td button {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    min-height: 32px;
+  }
+
+  .formulario-contacto button {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  th, td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .formulario-contacto {
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Stack buttons en móviles muy pequeños */
+  td {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  td button {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .formulario-contacto button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Animaciones suaves */
+table, .formulario-contacto, button {
+  transition: all 0.3s ease;
+}
+
+/* Mejora visual para estados vacíos */
+tbody:empty::after {
+  content: "No hay contactos agregados";
+  display: block;
+  text-align: center;
+  padding: 40px;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Efecto de overlay cuando el formulario está abierto */
+.formulario-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
