@@ -1,4 +1,4 @@
-/* styles.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,8 +25,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-
-/* Botón Agregar Contacto - MODIFICADO */
+ 
 .boton-agregar-container {
   width: 100%;
   margin-bottom: 10px;
@@ -56,8 +55,7 @@ h1 {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Tabla */
+ 
 table {
   width: 100%;
   border-collapse: collapse;
@@ -98,8 +96,7 @@ tr:last-child td {
 tr:hover {
   background-color: #f8f9fa;
 }
-
-/* Botones en la tabla */
+ 
 td button {
   background-color: #3498db;
   color: white;
@@ -142,7 +139,6 @@ td button:last-child:hover {
   background-color: #c0392b;
 }
 
-/* Formulario - MODIFICADO */
 .formulario-contacto {
   position: fixed;
   top: 50%;
@@ -193,7 +189,6 @@ td button:last-child:hover {
   color: #999;
 }
 
-/* BOTONES DEL FORMULARIO ARREGLADOS */
 .formulario-contacto button {
   background-color: #3498db;
   color: white;
@@ -229,8 +224,7 @@ td button:last-child:hover {
 .formulario-contacto button[type="button"]:hover {
   background-color: #cc1010;
 }
-
-/* Overlay para el formulario */
+ 
 .formulario-contacto::before {
   content: '';
   position: fixed;
@@ -240,8 +234,7 @@ td button:last-child:hover {
   bottom: 0; 
   z-index: -1;
 }
-
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .App {
     padding: 15px;
@@ -270,8 +263,7 @@ td button:last-child:hover {
   .formulario-contacto select {
     font-size: 14px;
   }
-
-  /* Hacer la tabla responsive en móviles */
+ 
   table {
     display: block;
     overflow-x: auto;
@@ -319,8 +311,7 @@ td button:last-child:hover {
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
-
-  /* Stack buttons en móviles muy pequeños */
+ 
   td {
     display: flex;
     flex-direction: column;
@@ -338,12 +329,10 @@ td button:last-child:hover {
   }
 }
 
-/* Animaciones suaves */
 table, .formulario-contacto, button {
   transition: all 0.3s ease;
 }
-
-/* Mejora visual para estados vacíos */
+ 
 tbody:empty::after {
   content: "No hay contactos agregados";
   display: block;
@@ -352,8 +341,7 @@ tbody:empty::after {
   color: #95a5a6;
   font-style: italic;
 }
-
-/* Efecto de overlay cuando el formulario está abierto */
+ 
 .formulario-overlay {
   position: fixed;
   top: 0;

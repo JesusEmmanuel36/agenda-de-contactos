@@ -8,16 +8,12 @@ export default async function handler(req, res) {
 
   try {
     switch (req.method) {
-      // --------------------------------------------------
-      // GET - Obtener todos los contactos
-      // --------------------------------------------------
+      // GET obtener contactos
       case "GET":
         const contactos = await collection.find({}).toArray();
         return res.status(200).json(contactos);
 
-      // --------------------------------------------------
-      // POST - Crear un nuevo contacto
-      // --------------------------------------------------
+      // POST crear contacto
       case "POST":
         const nuevo = req.body;
 
@@ -32,9 +28,7 @@ export default async function handler(req, res) {
           ...nuevo,
         });
 
-      // --------------------------------------------------
-      // PUT - Editar contacto
-      // --------------------------------------------------
+      // PUT editar contacto
       case "PUT":
         const { id, ...datosActualizados } = req.body;
 
@@ -51,9 +45,7 @@ export default async function handler(req, res) {
           message: "Contacto actualizado",
         });
 
-      // --------------------------------------------------
-      // DELETE - Eliminar contacto
-      // --------------------------------------------------
+      // DELETE editar contacto
       case "DELETE":
         const idEliminar = req.query.id;
 
@@ -64,8 +56,7 @@ export default async function handler(req, res) {
         await collection.deleteOne({ _id: new ObjectId(idEliminar) });
 
         return res.status(200).json({ message: "Contacto eliminado" });
-
-      // --------------------------------------------------
+ 
       default:
         res.setHeader("Allow", ["GET", "POST", "PUT", "DELETE"]);
         return res.status(405).end(`Método ${req.method} no permitido`);

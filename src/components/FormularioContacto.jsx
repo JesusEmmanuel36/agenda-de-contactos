@@ -28,7 +28,7 @@ function FormularioContacto({ agregarContacto, editarContacto, contactoEditar, c
     if (contactoEditar) {
       editarContacto({
         ...contacto,
-        id: contactoEditar._id, // IMPORTANTE
+        id: contactoEditar._id, 
       });
     } else {
       agregarContacto(contacto);

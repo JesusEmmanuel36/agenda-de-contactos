@@ -9,11 +9,9 @@ function App() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [cargando, setCargando] = useState(true);
 
-  const API = "/api/contactos"; // Vercel route
+  const API = "/api/contactos";  
 
-  // =============================
-  // CARGAR CONTACTOS (GET)
-  // =============================
+  // Cargar contactos
   const cargarContactos = async () => {
     setCargando(true);
     const res = await fetch(API);
@@ -26,9 +24,7 @@ function App() {
     cargarContactos();
   }, []);
 
-  // =============================
-  // AGREGAR CONTACTO (POST)
-  // =============================
+  // Agregar contacto
   const agregarContacto = async (contacto) => {
     const res = await fetch(API, {
       method: "POST",
@@ -40,9 +36,7 @@ function App() {
     setContactos([...contactos, nuevo]);
   };
 
-  // =============================
-  // EDITAR CONTACTO (PUT)
-  // =============================
+  // Editar contacto
   const editarContacto = async (contactoActualizado) => {
     await fetch(API, {
       method: "PUT",
@@ -57,9 +51,7 @@ function App() {
     );
   };
 
-  // =============================
-  // BORRAR CONTACTO (DELETE)
-  // =============================
+  // Borrar contacto
   const borrarContacto = async (id) => {
     await fetch(`${API}?id=${id}`, {
       method: "DELETE",

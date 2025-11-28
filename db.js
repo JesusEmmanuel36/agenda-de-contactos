@@ -1,7 +1,7 @@
-// db.js
+ 
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGO_URI; // Define esta variable en Vercel
+const uri = process.env.MONGO_URI;  
 let client;
 let clientPromise;
 
