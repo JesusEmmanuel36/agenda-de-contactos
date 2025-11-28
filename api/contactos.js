@@ -45,7 +45,7 @@ export default async function handler(req, res) {
           message: "Contacto actualizado",
         });
 
-      // DELETE editar contacto
+      // DELETE eliminar contacto
       case "DELETE":
         const idEliminar = req.query.id;
 
